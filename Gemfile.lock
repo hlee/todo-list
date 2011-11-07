@@ -253,7 +253,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   cucumber-rails (= 1.0.6)
   database_cleaner
-  devise
+  devise (>= 1.4.9)
   factory_girl_rails
   faker
   haml

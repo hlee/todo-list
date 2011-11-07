@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @item.content
+%p
+  %b Bg status:
+  = @item.bg_status
+%p
+  %b Priority:
+  = @item.priority
+
+= link_to 'Edit', edit_item_path(@item)
+\|
+= link_to 'Back', items_path
