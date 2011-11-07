@@ -7,6 +7,7 @@ TAPP::Application.routes.draw do
 
   devise_for :users
   resources :users, :only => :show
+  post 'items/ajax_create'
 
 
   # The priority is based upon order of creation:

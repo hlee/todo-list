@@ -53,6 +53,11 @@ class ItemsController < ApplicationController
     end
   end
 
+  def ajax_create
+debugger
+    @item = Item.new(:content => params[:content], :bg_status => params[:bg_status].to_i, :priority => params[:priority].to_i )   
+    render :partial => 'home/column'  
+  end
   # PUT /items/1
   # PUT /items/1.json
   def update
