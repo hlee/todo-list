@@ -16,7 +16,7 @@
     %h3 Current
     - Item.where(:bg_status => 2).each do |item|
       - color = priority2color item.priority
-      %li.widget.color-blue
+      %li.widget{:class => color}
         .widget-head
           %h3 Widget title
         .widget-content
@@ -27,7 +27,7 @@
     %h3 Finished
     - Item.where(:bg_status => 3).each do |item|
       - color = priority2color item.priority
-      %li.widget.color-orange
+      %li.widget{:class => color}
         .widget-head
           %h3 Widget title
         .widget-content

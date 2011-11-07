@@ -15,4 +15,12 @@ module HomeHelper
       'color-white'
     end
   end
+  
+  def color_list
+    options_for_select( [['urgent(orange)','1'], ['normal(green)','2'], ['(red)','3'], ['(yellow)',4], ['(blue)',5],])
+  end
+  
+  def stage_list
+    options_for_select([['future', 1],['current', 2],['prepare', 3]])
+  end
 end

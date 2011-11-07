@@ -11,10 +11,12 @@
     = f.text_field :content
   .field
     = f.label :bg_status
-    = f.number_field :bg_status
+    = f.select :bg_status, stage_list
+    /= f.number_field :bg_status
   .field
     = f.label :priority
-    = f.number_field :priority
+    = f.select :priority, color_list
+    /= f.number_field :priority
   .actions
     = f.submit 'Save'
     
@@ -24,8 +26,8 @@
     
     $("form").submit(function() {
       content = $('input#item_content').val();
-      bg_status = $('input#item_bg_status').val();
-      priority = $('input#item_priority').val();
+      bg_status = $('select#item_bg_status').val();
+      priority = $('select#item_priority').val();
       $.ajax({
         type: 'post',
         url: "#{items_ajax_create_path}",
