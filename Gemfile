@@ -40,6 +40,8 @@ gem 'mongrel','~> 1.2.0.pre2'
 gem 'passenger'
 gem 'require_relative'
 gem "devise", ">= 1.4.9"
+gem "twitter-bootstrap-rails"
+gem "rails-footnotes", ">= 3.7", :group => :development
 group :test,:development do
   # Pretty printed test output
   gem 'database_cleaner'
