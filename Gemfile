@@ -39,6 +39,7 @@ gem 'mysql2'
 gem 'mongrel','~> 1.2.0.pre2'
 gem 'passenger'
 gem 'require_relative'
+gem 'devise'
 group :test,:development do
   # Pretty printed test output
   gem 'database_cleaner'
