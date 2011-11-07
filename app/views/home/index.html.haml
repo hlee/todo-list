@@ -1,43 +1,10 @@
-%h3 Home
+%h3 ToDoList
 - @users.each do |user|
-  %p User: #{link_to user.name, user}
+  /%p User: #{link_to user.name, user}
 
 = render 'items/form'
 
-#columns
-  %ul#column1.column
-    %li#intro.widget.color-green
-      .widget-head
-        %h3 Introduction Widget
-      .widget-content
-        %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam magna sem, fringilla in, commodo a, rutrum ut, massa. Donec id nibh eu dui auctor tempor. Morbi laoreet eleifend dolor. Suspendisse pede odio, accumsan vitae, auctor non, suscipit at, ipsum. Cras varius sapien vel lectus.
-    %li.widget.color-red
-      .widget-head
-        %h3 Widget title
-      .widget-content
-        %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam magna sem, fringilla in, commodo a, rutrum ut, massa. Donec id nibh eu dui auctor tempor. Morbi laoreet eleifend dolor. Suspendisse pede odio, accumsan vitae, auctor non, suscipit at, ipsum. Cras varius sapien vel lectus.
-  %ul#column2.column
-    %li.widget.color-blue
-      .widget-head
-        %h3 Widget title
-      .widget-content
-        %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam magna sem, fringilla in, commodo a, rutrum ut, massa. Donec id nibh eu dui auctor tempor. Morbi laoreet eleifend dolor. Suspendisse pede odio, accumsan vitae, auctor non, suscipit at, ipsum. Cras varius sapien vel lectus.
-    %li.widget.color-yellow
-      .widget-head
-        %h3 Widget title
-      .widget-content
-        %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam magna sem, fringilla in, commodo a, rutrum ut, massa. Donec id nibh eu dui auctor tempor. Morbi laoreet eleifend dolor. Suspendisse pede odio, accumsan vitae, auctor non, suscipit at, ipsum. Cras varius sapien vel lectus.
-  %ul#column3.column
-    %li.widget.color-orange
-      .widget-head
-        %h3 Widget title
-      .widget-content
-        %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam magna sem, fringilla in, commodo a, rutrum ut, massa. Donec id nibh eu dui auctor tempor. Morbi laoreet eleifend dolor. Suspendisse pede odio, accumsan vitae, auctor non, suscipit at, ipsum. Cras varius sapien vel lectus.
-    %li.widget.color-white
-      .widget-head
-        %h3 Widget title
-      .widget-content
-        %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam magna sem, fringilla in, commodo a, rutrum ut, massa. Donec id nibh eu dui auctor tempor. Morbi laoreet eleifend dolor. Suspendisse pede odio, accumsan vitae, auctor non, suscipit at, ipsum. Cras varius sapien vel lectus.
+= render 'column'
 
 = javascript_include_tag 'http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js'
 = javascript_include_tag 'jquery-ui-personalized-1.6rc2.min.js'

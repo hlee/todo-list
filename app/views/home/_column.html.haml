@@ -1,0 +1,35 @@
+#columns
+  %ul#column1.column
+    %h3 Future
+    - Item.where(:bg_status => 1).each do |item|
+      - color = priority2color item.priority
+      %li.widget{:class => color}
+        .widget-head
+          %h3 
+            = item.priority
+        .widget-content
+          %p 
+          = item.content 
+        
+        
+  %ul#column2.column
+    %h3 Current
+    - Item.where(:bg_status => 2).each do |item|
+      - color = priority2color item.priority
+      %li.widget.color-blue
+        .widget-head
+          %h3 Widget title
+        .widget-content
+          %p 
+          = item.content
+        
+  %ul#column3.column
+    %h3 Finished
+    - Item.where(:bg_status => 3).each do |item|
+      - color = priority2color item.priority
+      %li.widget.color-orange
+        .widget-head
+          %h3 Widget title
+        .widget-content
+          %p 
+          = item.content
